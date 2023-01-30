@@ -1,4 +1,5 @@
 import {
+  Container,
   Navbar,
   ArtPieceBlock,
   AboutUs,
@@ -7,9 +8,11 @@ import {
 } from "../components";
 
 export const LandingPage = () => (
-  <Navbar />
-  // <ArtPieceBlock/>
-  // <AboutUs/>
-  // <Navbar/>
-  // <Navbar/>
+  <Container>
+    <Navbar />
+    {/* <ArtPieceBlock />
+    <AboutUs />
+    <ContactUs />
+    <Footer /> */}
+  </Container>
 );

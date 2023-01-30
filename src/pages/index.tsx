@@ -1,7 +1,13 @@
-import { Navbar, ArtPieceBlock, AboutUs, ContactUs, Footer } from "../components";
+import {
+  Navbar,
+  ArtPieceBlock,
+  AboutUs,
+  ContactUs,
+  Footer,
+} from "../components";
 
 export const LandingPage = () => (
-  // <Navbar/>
+  <Navbar />
   // <ArtPieceBlock/>
   // <AboutUs/>
   // <Navbar/>

@@ -1,12 +1,22 @@
-import { Wrapper, List, ListElement } from "./NavbarElements";
+import {
+  NavContainer,
+  NavList,
+  ListElement,
+  IconWrapper,
+} from "./NavbarElements";
+import { Favorite, Search } from "../../images";
+import { IconList } from "../IconList";
 
 export const Navbar = () => (
-  <Wrapper>
-    <List>
+  <NavContainer>
+    <NavList>
       <ListElement>Home</ListElement>
       <ListElement>Artists</ListElement>
       <ListElement>About us</ListElement>
       <ListElement>Contact</ListElement>
-    </List>
-  </Wrapper>
+    </NavList>
+    <IconWrapper>
+      <IconList icons={[Favorite, Search]} />
+    </IconWrapper>
+  </NavContainer>
 );

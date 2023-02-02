@@ -2,8 +2,11 @@ import {
   NavContainer,
   NavList,
   ListElement,
-  IconWrapper,
+  ItemWrapper,
   VerticalDivider,
+  BrandName,
+  BrandSlogan,
+  BrandWrapper,
 } from "./NavbarElements";
 import { Favorite, Search } from "../../images";
 import { IconList } from "../IconList";
@@ -16,9 +19,13 @@ export const Navbar = () => (
       <ListElement>About us</ListElement>
       <ListElement>Contact</ListElement>
     </NavList>
-    <IconWrapper>
+    <ItemWrapper>
       <IconList icons={[Search, Favorite]} />
       <VerticalDivider />
-    </IconWrapper>
+      <BrandWrapper>
+        <BrandName>Simplistik</BrandName>
+        <BrandSlogan>Contemporary art, simplified</BrandSlogan>
+      </BrandWrapper>
+    </ItemWrapper>
   </NavContainer>
 );

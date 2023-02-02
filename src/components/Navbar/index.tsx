@@ -3,6 +3,7 @@ import {
   NavList,
   ListElement,
   IconWrapper,
+  VerticalDivider,
 } from "./NavbarElements";
 import { Favorite, Search } from "../../images";
 import { IconList } from "../IconList";
@@ -16,7 +17,8 @@ export const Navbar = () => (
       <ListElement>Contact</ListElement>
     </NavList>
     <IconWrapper>
-      <IconList icons={[Favorite, Search]} />
+      <IconList icons={[Search, Favorite]} />
+      <VerticalDivider />
     </IconWrapper>
   </NavContainer>
 );

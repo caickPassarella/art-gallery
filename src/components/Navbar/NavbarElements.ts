@@ -40,7 +40,6 @@ export const VerticalDivider = styled.div`
 
 export const BrandName = styled(fontDefault)`
   font-size: 32px;
-  line-height: 38px;
 `;
 
 export const BrandSlogan = styled(fontDefault)`

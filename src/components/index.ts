@@ -6,6 +6,7 @@ import { Button } from "./Button";
 import { Plaque } from "./Plaque";
 import { ArtPieceBlock } from "./ArtPieceBlock";
 import { Container } from "./Container";
+import { SectionTitle } from "./SectionTitle";
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   Plaque,
   ArtPieceBlock,
   Container,
+  SectionTitle,
 };

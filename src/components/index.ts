@@ -3,6 +3,7 @@ import { AboutUs } from "./AboutUs";
 import { ContactUs } from "./ContactUs";
 import { Footer } from "./Footer";
 import { Button } from "./Button";
+import { HighlightedArtDisplay } from "./HighlightedArtDisplay";
 import { Plaque } from "./Plaque";
 import { ArtPieceBlock } from "./ArtPieceBlock";
 import { Container } from "./Container";
@@ -18,4 +19,5 @@ export {
   ArtPieceBlock,
   Container,
   SectionTitle,
+  HighlightedArtDisplay,
 };

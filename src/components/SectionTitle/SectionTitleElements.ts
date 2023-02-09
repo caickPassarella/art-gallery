@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { PrimaryFontColor } from "../../styles/colors";
+import { FontDefault } from "../../styles/main";
 
 type Props = {
   type: string;
@@ -9,21 +10,17 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 50px;
 `;
 
-export const Title = styled.h1<Props>`
-  font-family: "Bebas Neue";
-  font-weight: 400;
+export const Title = styled(FontDefault).attrs({ as: "h1" })<Props>`
   font-size: ${(props) => (props.type === "Main" ? "96px" : "64px")};
-  letter-spacing: 0.055em;
 
   color: ${PrimaryFontColor};
 `;
 
-export const SubTitle = styled.h2<Props>`
+export const SubTitle = styled(FontDefault).attrs({ as: "h2" })<Props>`
   font-family: "Roboto";
-  letter-spacing: 0.055em;
-  font-weight: 300;
   font-size: ${(props) => (props.type === "Main" ? "40px" : "32px")};
 
   color: ${PrimaryFontColor};

@@ -1,13 +1,22 @@
 import {
   HighlightDisplayContainer,
   ArtImg,
+  ImgWrapper,
 } from "./HighlightedArtDisplayElements";
-import { Art8 } from "../../images";
 
-export const HighlightedArtDisplay = () => {
+import { Plaque } from "../Plaque";
+
+type Props = {
+  src: string;
+};
+
+export const HighlightedArtDisplay = ({ src }: Props) => {
   return (
     <HighlightDisplayContainer>
-      <ArtImg src={Art8} />
+      <ImgWrapper>
+        <ArtImg {...{ src }} />
+        <Plaque />
+      </ImgWrapper>
     </HighlightDisplayContainer>
   );
 };

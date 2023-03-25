@@ -4,12 +4,10 @@ import {
   ListElement,
   ItemWrapper,
   VerticalDivider,
-  BrandName,
-  BrandSlogan,
-  BrandWrapper,
 } from "./NavbarElements";
-import { Favorite, Search } from "../../images";
+import { Favorite, Search } from "../../assets";
 import { IconList } from "../IconList";
+import { BrandSlogan } from "../BrandSlogan";
 
 export const Navbar = () => (
   <NavContainer>
@@ -22,10 +20,7 @@ export const Navbar = () => (
     <ItemWrapper>
       <IconList icons={[Search, Favorite]} />
       <VerticalDivider />
-      <BrandWrapper>
-        <BrandName>Simplistik</BrandName>
-        <BrandSlogan>Contemporary art, simplified</BrandSlogan>
-      </BrandWrapper>
+      <BrandSlogan name="Simplistik" slogan="Contemporary art, simplified" />
     </ItemWrapper>
   </NavContainer>
 );

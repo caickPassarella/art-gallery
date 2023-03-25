@@ -6,14 +6,21 @@ import {
   H2,
   P,
 } from "./PlaqueElements";
-export const Plaque = ({}) => {
+
+type Props = {
+  artist: String;
+  pieceName: String;
+  pieceDesc: String;
+};
+
+export const Plaque = ({ artist, pieceName, pieceDesc }: Props) => {
   return (
     <PlaqueContainer>
       <PlaqueArea>
         <TextWrapper>
-          <H2>Artist name</H2>
-          <H1>Piece name</H1>
-          <P>Piece description</P>
+          <H2>{artist}</H2>
+          <H1>{pieceName}</H1>
+          <P>{pieceDesc}</P>
         </TextWrapper>
       </PlaqueArea>
     </PlaqueContainer>

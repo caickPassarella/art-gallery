@@ -14,14 +14,14 @@ export const TitleContainer = styled.div`
 `;
 
 export const Title = styled(FontDefault).attrs({ as: "h1" })<Props>`
-  font-size: ${(props) => (props.type === "Main" ? "96px" : "64px")};
+  font-size: ${(props) => (props.type === "Main" ? "6em" : "4em")};
 
   color: ${PrimaryFontColor};
 `;
 
 export const SubTitle = styled(FontDefault).attrs({ as: "h2" })<Props>`
   font-family: "Roboto";
-  font-size: ${(props) => (props.type === "Main" ? "40px" : "32px")};
+  font-size: ${(props) => (props.type === "Main" ? "2.5em" : "2em")};
 
   color: ${PrimaryFontColor};
 `;

@@ -30,18 +30,3 @@ export const VerticalDivider = styled.div`
   height: 44px;
   margin: 0 30px;
 `;
-
-export const BrandName = styled(FontDefault).attrs({ as: "h3" })`
-  font-size: 32px;
-`;
-
-export const BrandSlogan = styled(FontDefault).attrs({ as: "h4" })`
-  font-size: 16px;
-  font-weight: 400;
-`;
-
-export const BrandWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;

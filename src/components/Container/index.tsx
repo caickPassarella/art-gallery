@@ -1,4 +1,10 @@
+import { ReactNode } from "react";
 import { Wrapper } from "./ContainerElements";
-export const Container = (props: any) => {
+
+type ContainerProps = {
+  children: ReactNode;
+};
+
+export const Container = (props: ContainerProps) => {
   return <Wrapper>{props.children}</Wrapper>;
 };

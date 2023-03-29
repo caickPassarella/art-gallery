@@ -6,6 +6,7 @@
       "name": "Art piece 0",
       "description": "Art piece 0 description",
       "year": "2023",
+      "highlight": true,
       "artist": {
         "name": "Artist name 0",
         "birthYear": "1960",
@@ -39,6 +40,7 @@
       "name": "Art piece 3",
       "description": "Art piece 3 description",
       "year": "2023",
+      "highlight": true,
       "artist": {
         "name": "Artist name 3",
         "birthYear": "1960",
@@ -50,6 +52,7 @@
       "name": "Art piece 4",
       "description": "Art piece 4 description",
       "year": "2023",
+      "highlight": true,
       "artist": {
         "name": "Artist name 4",
         "birthYear": "1960",

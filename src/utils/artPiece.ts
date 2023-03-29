@@ -1,15 +1,16 @@
 import { ArtPiece } from "../types/artPiece";
 
-export const selectRandomArt = (arr: any[]): ArtPiece => {
-  const originalArr = arr.slice();
+export const selectRandomHighlightArt = (arr: ArtPiece[]): ArtPiece => {
+  const highlightedPieces = arr.filter((piece) => piece.highlight === true);
+  const originalArr = highlightedPieces.slice();
 
-  let randomIndex = Math.floor(Math.random() * arr.length);
-  let randomItem = arr[randomIndex];
-  arr.splice(randomIndex, 1);
+  let randomIndex = Math.floor(Math.random() * highlightedPieces.length);
+  let randomItem = highlightedPieces[randomIndex];
+  highlightedPieces.splice(randomIndex, 1);
 
   // Reset array after a full rotation
-  if (arr.length === 0) {
-    arr.splice(0, arr.length, ...originalArr);
+  if (highlightedPieces.length === 0) {
+    highlightedPieces.splice(0, highlightedPieces.length, ...originalArr);
   }
 
   return randomItem;

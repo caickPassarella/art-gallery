@@ -11,18 +11,19 @@ import {
   Plaque,
 } from "../components";
 
-import { selectRandomArt } from "../utils/artPiece";
+import { selectRandomHighlightArt } from "../utils/artPiece";
 import { ArtPiece } from "../types/artPiece";
 import { fetchArtPieces } from "../services/api";
 
 export const LandingPage = () => {
   const [currentArt, setCurrentArt] = useState<ArtPiece | "loading">("loading");
 
+  // Random art rotation until backend is finished for proper rotation.
   useEffect(() => {
     const currentRandomArt = async () => {
       const artData = await fetchArtPieces();
-      const randomArt = selectRandomArt(artData);
-      setCurrentArt(randomArt);
+      const randomHighlightArt = selectRandomHighlightArt(artData);
+      setCurrentArt(randomHighlightArt);
     };
     currentRandomArt();
   }, []);

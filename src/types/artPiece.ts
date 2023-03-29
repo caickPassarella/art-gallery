@@ -3,6 +3,7 @@ export interface ArtPiece {
   name: string;
   description: string;
   year: number;
+  highlight?: boolean;
   artist: {
     name: string;
     birthyear: number;

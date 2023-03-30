@@ -5,6 +5,6 @@ type ContainerProps = {
   children: ReactNode;
 };
 
-export const Container = (props: ContainerProps) => {
-  return <Wrapper>{props.children}</Wrapper>;
+export const Container = ({ children }: ContainerProps) => {
+  return <Wrapper>{children}</Wrapper>;
 };

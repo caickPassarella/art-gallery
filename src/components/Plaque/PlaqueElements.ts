@@ -6,8 +6,8 @@ export const PlaqueContainer = styled.div`
 `;
 
 export const PlaqueArea = styled.div`
-  width: 45%;
-  height: 120px;
+  width: 18em;
+  height: 7.5em;
   border: none;
   outline: none;
   padding: 0px 30px 0px 30px;

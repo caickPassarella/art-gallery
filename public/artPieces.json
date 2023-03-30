@@ -2,6 +2,7 @@
   "galleryName": "Art gallery name",
   "artPieces": [
     {
+      "id": 0,
       "asset": "/images/random-art0.jpg",
       "name": "Art piece 0",
       "description": "Art piece 0 description",
@@ -14,10 +15,12 @@
       }
     },
     {
+      "id": 1,
       "asset": "/images/random-art1.jpg",
       "name": "Art piece 1",
       "description": "Art piece 1 description",
       "year": "2023",
+      "highlight": false,
       "artist": {
         "name": "Artist name 1",
         "birthYear": "1960",
@@ -25,10 +28,12 @@
       }
     },
     {
+      "id": 2,
       "asset": "/images/random-art2.jpg",
       "name": "Art piece 2",
       "description": "Art piece 2 description",
       "year": "2023",
+      "highlight": false,
       "artist": {
         "name": "Artist name 2",
         "birthYear": "1960",
@@ -36,6 +41,7 @@
       }
     },
     {
+      "id": 3,
       "asset": "/images/random-art3.jpg",
       "name": "Art piece 3",
       "description": "Art piece 3 description",
@@ -48,6 +54,7 @@
       }
     },
     {
+      "id": 4,
       "asset": "/images/random-art4.jpg",
       "name": "Art piece 4",
       "description": "Art piece 4 description",
@@ -60,10 +67,12 @@
       }
     },
     {
+      "id": 5,
       "asset": "/images/random-art5.jpg",
       "name": "Art piece 5",
       "description": "Art piece 5 description",
       "year": "2023",
+      "highlight": false,
       "artist": {
         "name": "Artist name 5",
         "birthYear": "1960",
@@ -71,10 +80,12 @@
       }
     },
     {
+      "id": 6,
       "asset": "/images/random-art6.jpg",
       "name": "Art piece 6",
       "description": "Art piece 6 description",
       "year": "2023",
+      "highlight": false,
       "artist": {
         "name": "Artist name 6",
         "birthYear": "1960",
@@ -82,10 +93,12 @@
       }
     },
     {
+      "id": 7,
       "asset": "/images/random-art7.jpg",
       "name": "Art piece 7",
       "description": "Art piece 7 description",
       "year": "2023",
+      "highlight": false,
       "artist": {
         "name": "Artist name 7",
         "birthYear": "1960",
@@ -93,10 +106,12 @@
       }
     },
     {
+      "id": 8,
       "asset": "/images/random-art8.jpg",
       "name": "Art piece 8",
       "description": "Art piece 8 description",
       "year": "2023",
+      "highlight": false,
       "artist": {
         "name": "Artist name 8",
         "birthYear": "1960",

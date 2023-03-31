@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
+interface ImgProps {
+  height?: string;
+}
+
 export const IconContainer = styled.div`
   display: grid;
   height: 100%;
-  grid-gap: 20px;
+  grid-gap: 12px;
 `;
 
 export const GridItem = styled.div`
@@ -14,7 +18,7 @@ export const GridItem = styled.div`
   max-height: 45px;
 `;
 
-export const Img = styled.img`
-  height: 100%;
+export const Img = styled.img<ImgProps>`
+  height: ${(props) => (props.height ? props.height : "100%")};
   max-height: 30px;
 `;

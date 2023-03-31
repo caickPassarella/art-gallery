@@ -19,7 +19,7 @@ export const ImgWrapper = styled.div`
 
 export const ArtImg = styled.img<Props>`
   object-fit: cover;
-  width: ${(props) => (props.highlight ? "800px" : "400px")};
-  height: ${(props) => (props.highlight ? "800px" : "400px")};
+  width: ${(props) => (props.highlight ? "850px" : "500px")};
+  height: ${(props) => (props.highlight ? "700px" : "400px")};
   max-height: 100vh;
 `;

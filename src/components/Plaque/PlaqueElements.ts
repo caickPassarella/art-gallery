@@ -2,22 +2,19 @@ import styled from "styled-components";
 import { FontDefault } from "../../styles/main";
 
 export const PlaqueContainer = styled.div`
-  margin-top: 25px;
+  margin-top: 35px;
 `;
 
 export const PlaqueArea = styled.div`
+  display: flex;
+  justify-content: space-around;
   width: 18em;
   height: 7.5em;
-  border: none;
-  outline: none;
-  padding: 0px 30px 0px 30px;
   background: #f4e365;
   box-shadow: inset -4px 4px 8px rgba(205, 191, 85, 0.2),
     inset 4px -4px 8px rgba(205, 191, 85, 0.2),
     inset -4px -4px 8px rgba(255, 255, 117, 0.9),
     inset 4px 4px 10px rgba(205, 191, 85, 0.9);
-  user-select: none;
-  font-size: 15px;
 `;
 
 export const TextWrapper = styled.div`
@@ -25,23 +22,22 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   gap: 8px;
   padding-top: 20px;
-  margin: 5px;
 `;
 
-export const H2 = styled(FontDefault).attrs({ as: "h2" })`
+export const H2 = styled(FontDefault)`
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 0.9em;
 `;
 
-export const H1 = styled(FontDefault).attrs({ as: "h1" })`
+export const H1 = styled(FontDefault)`
   font-family: "Roboto";
   font-weight: bolder;
-  font-size: 16px;
+  font-size: 1em;
 `;
 
-export const P = styled(FontDefault).attrs({ as: "p" })`
+export const P = styled(FontDefault)`
   font-family: "Roboto";
-  font-size: 14px;
+  font-size: 0.9em;
   font-weight: lighter;
   margin-top: 12px;
 `;

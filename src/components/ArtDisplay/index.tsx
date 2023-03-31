@@ -14,9 +14,9 @@ interface ArtDisplayProps {
 export const ArtDisplay = ({ pieces }: ArtDisplayProps) => {
   return (
     <HighlightDisplayContainer>
-      {pieces.map((artPiece) => {
+      {pieces.map((artPiece, index) => {
         return (
-          <ImgWrapper>
+          <ImgWrapper key={index}>
             <ArtImg src={artPiece.asset} highlight={artPiece.highlight} />
             <Plaque
               artist={artPiece.artist.name}

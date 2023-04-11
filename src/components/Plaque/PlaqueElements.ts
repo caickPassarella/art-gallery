@@ -24,18 +24,18 @@ export const TextWrapper = styled.div`
   padding-top: 20px;
 `;
 
-export const H2 = styled(FontDefault)`
+export const Artist = styled(FontDefault)`
   font-family: "Roboto";
   font-size: 0.9em;
 `;
 
-export const H1 = styled(FontDefault)`
+export const PieceName = styled(FontDefault)`
   font-family: "Roboto";
   font-weight: bolder;
   font-size: 1em;
 `;
 
-export const P = styled(FontDefault)`
+export const PieceDesc = styled(FontDefault)`
   font-family: "Roboto";
   font-size: 0.9em;
   font-weight: lighter;

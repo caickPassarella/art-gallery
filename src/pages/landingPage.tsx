@@ -2,13 +2,13 @@ import { useEffect, useState } from "react";
 import {
   Container,
   Navbar,
-  ArtPieceBlock,
   AboutUs,
   ContactUs,
   Footer,
   SectionTitle,
   ArtDisplay,
   Plaque,
+  Button,
 } from "../components";
 
 import { ArtPiece } from "../types/artPiece";
@@ -31,15 +31,21 @@ export const LandingPage = () => {
   }, []);
 
   return (
-    <Container>
-      <Navbar />
-      <SectionTitle
-        title="Art Gallery"
-        subtitle="Explore the art"
-        type="Main"
-      />
-      <ArtDisplay pieces={highlightArtPiece} />
-      <ArtDisplay pieces={normalArtPiece} />
-    </Container>
+    <>
+      <Container>
+        <Navbar />
+      </Container>
+      <Container align="center">
+        <SectionTitle
+          title="Art Gallery"
+          subtitle="Explore the art"
+          type="Main"
+        />
+        <ArtDisplay pieces={highlightArtPiece} />
+        <ArtDisplay pieces={normalArtPiece} />
+        <Button>Full Gallery</Button>
+        <AboutUs />
+      </Container>
+    </>
   );
 };

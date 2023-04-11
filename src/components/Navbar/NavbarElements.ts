@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FontDefault } from "../../styles/main";
 
-export const NavContainer = styled.div`
+export const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +14,7 @@ export const NavList = styled.ul`
   justify-content: space-between;
 `;
 
-export const ListElement = styled(FontDefault)`
+export const ListElement = styled(FontDefault).attrs({ as: "li" })`
   list-style: none;
   margin: 20px;
   font-weight: 400;

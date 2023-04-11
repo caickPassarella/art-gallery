@@ -2,9 +2,9 @@ import {
   PlaqueContainer,
   PlaqueArea,
   TextWrapper,
-  H1,
-  H2,
-  P,
+  PieceName,
+  Artist,
+  PieceDesc,
 } from "./PlaqueElements";
 
 import { IconList } from "../IconList";
@@ -21,9 +21,9 @@ export const Plaque = ({ artist, pieceName, pieceDesc }: Props) => {
     <PlaqueContainer>
       <PlaqueArea>
         <TextWrapper>
-          <H2>{artist}</H2>
-          <H1>{pieceName}</H1>
-          <P>{pieceDesc}</P>
+          <Artist>{artist}</Artist>
+          <PieceName>{pieceName}</PieceName>
+          <PieceDesc>{pieceDesc}</PieceDesc>
         </TextWrapper>
         <IconList icons={[Favorite, Zoom]} height={"20px"} />
       </PlaqueArea>

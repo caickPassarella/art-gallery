@@ -13,6 +13,7 @@ export const IconContainer = styled.div`
 export const GridItem = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
   width: 100%;
   height: 100%;
   max-height: 45px;

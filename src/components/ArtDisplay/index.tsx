@@ -5,23 +5,23 @@ import {
 } from "./ArtDisplayElements";
 
 import { Plaque } from "../Plaque";
-import { ArtPiece } from "../../types/artPiece";
+import { ArtPieceProps } from "../../types/artPiece";
 
-interface ArtDisplayProps {
-  pieces: ArtPiece[];
-}
-
-export const ArtDisplay = ({ pieces }: ArtDisplayProps) => {
+export const ArtDisplay = ({ artPieces }: ArtPieceProps) => {
+  console.log(artPieces);
+  if (artPieces.length === 0) {
+    return null; // or return some default component or message
+  }
   return (
     <HighlightDisplayContainer>
-      {pieces.map((artPiece, index) => {
+      {artPieces.map((piece, index) => {
         return (
           <ImgWrapper key={index}>
-            <ArtImg src={artPiece.asset} highlight={artPiece.highlight} />
+            <ArtImg src={piece.asset} highlight={piece.highlight} />
             <Plaque
-              artist={artPiece.artist.name}
-              pieceName={artPiece.name}
-              pieceDesc={artPiece.description}
+              artist={piece.artist.name}
+              pieceName={piece.name}
+              pieceDesc={piece.description}
             />
           </ImgWrapper>
         );

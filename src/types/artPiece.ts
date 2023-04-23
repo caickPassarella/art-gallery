@@ -11,3 +11,8 @@ export interface ArtPiece {
     deathYear?: number;
   };
 }
+
+export interface ArtPieceProps {
+  artPieces: ArtPiece[];
+  direction?: "vertical" | "horizontal";
+}

@@ -11,24 +11,18 @@ import {
   Button,
 } from "../components";
 
-import { ArtPiece } from "../types/artPiece";
-import { fetchArtPieces } from "../services/api";
+import { ArtPiece, ArtPieceProps } from "../types/artPiece";
 
-export const LandingPage = () => {
+export const LandingPage = ({ artPieces }: ArtPieceProps) => {
   const [normalArtPiece, setNormalArtPiece] = useState<ArtPiece[]>([]);
   const [highlightArtPiece, setHighlightArtPiece] = useState<ArtPiece[]>([]);
 
-  // Random art rotation until backend is finished for proper rotation.
   useEffect(() => {
-    const artnormalArtPiece = async () => {
-      const artData = await fetchArtPieces();
-      const normalArtData = artData.filter((art) => !art.highlight);
-      const highlightArtData = artData.filter((art) => art.highlight);
-      setHighlightArtPiece([highlightArtData[0]]);
-      setNormalArtPiece(normalArtData.slice(0, 2));
-    };
-    artnormalArtPiece();
-  }, []);
+    const normalArtData = artPieces.filter((art) => !art.highlight);
+    const highlightArtData = artPieces.filter((art) => art.highlight);
+    setHighlightArtPiece([highlightArtData[0]]);
+    setNormalArtPiece(normalArtData.slice(0, 2));
+  }, [artPieces]);
 
   return (
     <>
@@ -41,10 +35,10 @@ export const LandingPage = () => {
           subtitle="Explore the art"
           type="Main"
         />
-        <ArtDisplay pieces={highlightArtPiece} />
-        <ArtDisplay pieces={normalArtPiece} />
+        <ArtDisplay artPieces={highlightArtPiece} />
+        <ArtDisplay artPieces={normalArtPiece} />
         <Button>Full Gallery</Button>
-        <AboutUs />
+        <AboutUs artPieces={[artPieces[0]]} />
       </Container>
     </>
   );

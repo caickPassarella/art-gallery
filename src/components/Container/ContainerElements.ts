@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { primaryBGColor } from "../../styles/colors";
 
-interface Props {
+type Props = {
   align?: string;
-}
+};
 
 export const Wrapper = styled.div<Props>`
   background-color: ${primaryBGColor};

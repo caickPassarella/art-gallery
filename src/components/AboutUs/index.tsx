@@ -1,9 +1,11 @@
 import { SectionTitle } from "../SectionTitle";
 import { Paragraph } from "../Paragraph";
+import { ArtDisplay } from "../ArtDisplay";
+import { ArtPieceProps } from "../../types/artPiece";
 
 import { Container, Wrapper } from "./AboutUsElements";
 
-export const AboutUs = () => {
+export const AboutUs = ({ artPieces }: ArtPieceProps) => {
   return (
     <Wrapper>
       <Container>
@@ -13,7 +15,9 @@ export const AboutUs = () => {
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec augue nibh, commodo posuere ligula vel, tristique suscipit elit. Sed pretium lacus ut turpis iaculis cursus. Nullam tincidunt tortor tellus, vel mollis ligula tincidunt."
         />
       </Container>
-      <Container></Container>
+      <Container>
+        <ArtDisplay artPieces={artPieces} />
+      </Container>
     </Wrapper>
   );
 };

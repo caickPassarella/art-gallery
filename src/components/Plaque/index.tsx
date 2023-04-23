@@ -10,13 +10,13 @@ import {
 import { IconList } from "../IconList";
 import { Favorite, Zoom } from "../../assets";
 
-type Props = {
+interface PlaqueProps {
   artist: String;
   pieceName: String;
   pieceDesc: String;
-};
+}
 
-export const Plaque = ({ artist, pieceName, pieceDesc }: Props) => {
+export const Plaque = ({ artist, pieceName, pieceDesc }: PlaqueProps) => {
   return (
     <PlaqueContainer>
       <PlaqueArea>

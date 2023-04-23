@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-interface Props {
+type Props = {
   highlight: boolean;
-}
+};
 
 export const HighlightDisplayContainer = styled.div`
   display: flex;

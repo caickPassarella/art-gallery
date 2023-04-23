@@ -20,8 +20,8 @@ export const LandingPage = ({ artPieces }: ArtPieceProps) => {
   useEffect(() => {
     const normalArtData = artPieces.filter((art) => !art.highlight);
     const highlightArtData = artPieces.filter((art) => art.highlight);
-    setHighlightArtPiece([highlightArtData[0]]);
     setNormalArtPiece(normalArtData.slice(0, 2));
+    setHighlightArtPiece([highlightArtData[0]]);
   }, [artPieces]);
 
   return (
@@ -35,10 +35,10 @@ export const LandingPage = ({ artPieces }: ArtPieceProps) => {
           subtitle="Explore the art"
           type="Main"
         />
-        <ArtDisplay artPieces={highlightArtPiece} />
-        <ArtDisplay artPieces={normalArtPiece} />
+        <ArtDisplay plaque={true} artPieces={highlightArtPiece} />
+        <ArtDisplay plaque={true} artPieces={normalArtPiece} />
         <Button>Full Gallery</Button>
-        <AboutUs artPieces={[artPieces[0]]} />
+        <AboutUs artPieces={[artPieces[9]]} />
       </Container>
     </>
   );

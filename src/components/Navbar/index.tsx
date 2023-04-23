@@ -18,7 +18,7 @@ export const Navbar = () => (
       <ListElement>Contact</ListElement>
     </NavList>
     <ItemWrapper>
-      <IconList icons={[Search, Favorite]} />
+      <IconList height="30px" icons={[Search, Favorite]} />
       <VerticalDivider />
       <BrandSlogan name="Simplistik" slogan="Contemporary art, simplified" />
     </ItemWrapper>

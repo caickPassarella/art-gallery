@@ -21,5 +21,5 @@ export const GridItem = styled.div`
 
 export const Img = styled.img<ImgProps>`
   height: ${(props) => (props.height ? props.height : "100%")};
-  max-height: 30px;
+  max-height: 35px;
 `;

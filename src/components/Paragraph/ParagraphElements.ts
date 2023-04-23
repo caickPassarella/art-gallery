@@ -7,13 +7,12 @@ export const Container = styled.div`
   background-color: ${SecondaryBGColor};
   flex-direction: column;
   align-items: flex-start;
-  width: 100%;
 `;
 
 export const P = styled(FontDefault)`
   font-family: "Roboto";
   line-height: 130%;
-  width: 50%;
+  margin-bottom: 50px;
 `;
 
 export const PTitle = styled(FontDefault).attrs({ as: "h3" })`

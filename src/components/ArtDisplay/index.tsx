@@ -1,29 +1,35 @@
 import {
   HighlightDisplayContainer,
   ArtImg,
-  ImgWrapper,
+  PieceWrapper,
+  FrameWrapper,
+  ArtFrame,
 } from "./ArtDisplayElements";
 
 import { Plaque } from "../Plaque";
 import { ArtPieceProps } from "../../types/artPiece";
 
-export const ArtDisplay = ({ artPieces }: ArtPieceProps) => {
-  console.log(artPieces);
+export const ArtDisplay = ({ artPieces, plaque }: ArtPieceProps) => {
   if (artPieces.length === 0) {
-    return null; // or return some default component or message
+    return null;
   }
   return (
     <HighlightDisplayContainer>
       {artPieces.map((piece, index) => {
         return (
-          <ImgWrapper key={index}>
-            <ArtImg src={piece.asset} highlight={piece.highlight} />
-            <Plaque
-              artist={piece.artist.name}
-              pieceName={piece.name}
-              pieceDesc={piece.description}
-            />
-          </ImgWrapper>
+          <PieceWrapper key={index}>
+            <FrameWrapper>
+              <ArtImg src={piece.asset} highlight={piece.highlight} />
+              <ArtFrame src={piece.frame} highlight={piece.highlight} />
+            </FrameWrapper>
+            {plaque === false ? null : (
+              <Plaque
+                artist={piece.artist.name}
+                pieceName={piece.name}
+                pieceDesc={piece.description}
+              />
+            )}
+          </PieceWrapper>
         );
       })}
     </HighlightDisplayContainer>

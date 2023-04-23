@@ -2,6 +2,7 @@ export interface ArtPiece {
   id: number;
   asset: string;
   name: string;
+  frame: string;
   description: string;
   year: number;
   highlight: boolean;
@@ -14,5 +15,5 @@ export interface ArtPiece {
 
 export interface ArtPieceProps {
   artPieces: ArtPiece[];
-  direction?: "vertical" | "horizontal";
+  plaque?: boolean;
 }

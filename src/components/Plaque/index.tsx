@@ -7,6 +7,9 @@ import {
   P,
 } from "./PlaqueElements";
 
+import { IconList } from "../IconList";
+import { Favorite, Zoom } from "../../assets";
+
 type Props = {
   artist: String;
   pieceName: String;
@@ -22,6 +25,7 @@ export const Plaque = ({ artist, pieceName, pieceDesc }: Props) => {
           <H1>{pieceName}</H1>
           <P>{pieceDesc}</P>
         </TextWrapper>
+        <IconList icons={[Favorite, Zoom]} height={"20px"} />
       </PlaqueArea>
     </PlaqueContainer>
   );

@@ -7,25 +7,27 @@ import {
   ContactUs,
   Footer,
   SectionTitle,
-  HighlightedArtDisplay,
+  ArtDisplay,
   Plaque,
 } from "../components";
 
-import { selectRandomHighlightArt } from "../utils/artPiece";
 import { ArtPiece } from "../types/artPiece";
 import { fetchArtPieces } from "../services/api";
 
 export const LandingPage = () => {
-  const [currentArt, setCurrentArt] = useState<ArtPiece | "loading">("loading");
+  const [normalArtPiece, setNormalArtPiece] = useState<ArtPiece[]>([]);
+  const [highlightArtPiece, setHighlightArtPiece] = useState<ArtPiece[]>([]);
 
   // Random art rotation until backend is finished for proper rotation.
   useEffect(() => {
-    const currentRandomArt = async () => {
+    const artnormalArtPiece = async () => {
       const artData = await fetchArtPieces();
-      const randomHighlightArt = selectRandomHighlightArt(artData);
-      setCurrentArt(randomHighlightArt);
+      const normalArtData = artData.filter((art) => !art.highlight);
+      const highlightArtData = artData.filter((art) => art.highlight);
+      setHighlightArtPiece([highlightArtData[0]]);
+      setNormalArtPiece(normalArtData.slice(0, 2));
     };
-    currentRandomArt();
+    artnormalArtPiece();
   }, []);
 
   return (
@@ -36,19 +38,8 @@ export const LandingPage = () => {
         subtitle="Explore the art"
         type="Main"
       />
-      {currentArt !== "loading" ? (
-        <HighlightedArtDisplay
-          src={currentArt.asset}
-          artist={currentArt.artist.name}
-          pieceName={currentArt.name}
-          pieceDesc={currentArt.description}
-        />
-      ) : null}
-
-      {/* <ArtPieceBlock />
-    <AboutUs />
-    <ContactUs />
-    <Footer /> */}
+      <ArtDisplay pieces={highlightArtPiece} />
+      <ArtDisplay pieces={normalArtPiece} />
     </Container>
   );
 };

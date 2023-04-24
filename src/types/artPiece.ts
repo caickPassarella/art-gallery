@@ -1,9 +1,10 @@
 export interface ArtPiece {
+  id: number;
   asset: string;
   name: string;
   description: string;
   year: number;
-  highlight?: boolean;
+  highlight: boolean;
   artist: {
     name: string;
     birthyear: number;

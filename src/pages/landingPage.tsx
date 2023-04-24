@@ -7,8 +7,8 @@ import {
   Footer,
   SectionTitle,
   ArtDisplay,
-  Plaque,
   Button,
+  ArtistsInfo,
 } from "../components";
 
 import { ArtPiece, ArtPieceProps } from "../types/artPiece";
@@ -39,6 +39,7 @@ export const LandingPage = ({ artPieces }: ArtPieceProps) => {
         <ArtDisplay plaque={true} artPieces={normalArtPiece} />
         <Button>Full Gallery</Button>
         <AboutUs artPieces={[artPieces[9]]} />
+        <ArtistsInfo artHighlight={artPieces[0].asset} />
       </Container>
     </>
   );

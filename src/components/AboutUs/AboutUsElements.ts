@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SecondaryBGColor } from "../../styles/colors";
 import { FontDefault } from "../../styles/main";
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.section`
   display: flex;
   flex-direction: row;
 `;

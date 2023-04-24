@@ -1,8 +1,10 @@
-import { SectionTitle } from "../SectionTitle";
-import { Paragraph } from "../Paragraph";
-import { ArtDisplay } from "../ArtDisplay";
+import {
+  SectionTitle,
+  Paragraph,
+  ArtDisplay,
+  IconList,
+} from "../../components";
 import { ArtPieceProps } from "../../types/artPiece";
-import { IconList } from "../IconList";
 
 import { Pinterest, Instagram } from "../../assets";
 

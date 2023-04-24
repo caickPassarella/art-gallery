@@ -7,6 +7,9 @@ import { ArtDisplay } from "./ArtDisplay";
 import { Plaque } from "./Plaque";
 import { Container } from "./Container";
 import { SectionTitle } from "./SectionTitle";
+import { ArtistsInfo } from "./ArtistsInfo";
+import { Paragraph } from "./Paragraph";
+import { IconList } from "./IconList";
 
 export {
   Navbar,
@@ -18,4 +21,7 @@ export {
   Container,
   SectionTitle,
   ArtDisplay,
+  ArtistsInfo,
+  Paragraph,
+  IconList,
 };

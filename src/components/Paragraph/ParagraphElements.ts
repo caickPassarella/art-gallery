@@ -2,9 +2,8 @@ import styled from "styled-components";
 import { FontDefault } from "../../styles/main";
 import { SecondaryBGColor } from "../../styles/colors";
 
-export const Container = styled.div`
+export const Container = styled.article`
   display: flex;
-  background-color: ${SecondaryBGColor};
   flex-direction: column;
   align-items: flex-start;
 `;

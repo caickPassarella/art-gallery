@@ -2,6 +2,7 @@ export interface ArtPiece {
   id: number;
   asset: string;
   name: string;
+  frame: string;
   description: string;
   year: number;
   highlight: boolean;
@@ -10,4 +11,9 @@ export interface ArtPiece {
     birthyear: number;
     deathYear?: number;
   };
+}
+
+export interface ArtPieceProps {
+  artPieces: ArtPiece[];
+  plaque?: boolean;
 }

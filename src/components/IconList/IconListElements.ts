@@ -13,6 +13,7 @@ export const IconContainer = styled.div`
 export const GridItem = styled.div`
   display: flex;
   align-items: center;
+  cursor: pointer;
   width: 100%;
   height: 100%;
   max-height: 45px;
@@ -20,5 +21,5 @@ export const GridItem = styled.div`
 
 export const Img = styled.img<ImgProps>`
   height: ${(props) => (props.height ? props.height : "100%")};
-  max-height: 30px;
+  max-height: 35px;
 `;

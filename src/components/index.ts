@@ -5,7 +5,6 @@ import { Footer } from "./Footer";
 import { Button } from "./Button";
 import { ArtDisplay } from "./ArtDisplay";
 import { Plaque } from "./Plaque";
-import { ArtPieceBlock } from "./ArtPieceBlock";
 import { Container } from "./Container";
 import { SectionTitle } from "./SectionTitle";
 
@@ -16,7 +15,6 @@ export {
   Footer,
   Button,
   Plaque,
-  ArtPieceBlock,
   Container,
   SectionTitle,
   ArtDisplay,

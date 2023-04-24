@@ -10,10 +10,9 @@ export const PlaqueArea = styled.div`
   justify-content: space-around;
   width: 18em;
   height: 7.5em;
-  background: #f4e365;
+  background: #feea83;
   box-shadow: inset -4px 4px 8px rgba(205, 191, 85, 0.2),
     inset 4px -4px 8px rgba(205, 191, 85, 0.2),
-    inset -4px -4px 8px rgba(255, 255, 117, 0.9),
     inset 4px 4px 10px rgba(205, 191, 85, 0.9);
 `;
 
@@ -24,18 +23,18 @@ export const TextWrapper = styled.div`
   padding-top: 20px;
 `;
 
-export const H2 = styled(FontDefault)`
+export const Artist = styled(FontDefault)`
   font-family: "Roboto";
   font-size: 0.9em;
 `;
 
-export const H1 = styled(FontDefault)`
+export const PieceName = styled(FontDefault)`
   font-family: "Roboto";
   font-weight: bolder;
   font-size: 1em;
 `;
 
-export const P = styled(FontDefault)`
+export const PieceDesc = styled(FontDefault)`
   font-family: "Roboto";
   font-size: 0.9em;
   font-weight: lighter;

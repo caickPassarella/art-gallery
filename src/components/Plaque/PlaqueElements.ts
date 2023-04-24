@@ -10,10 +10,9 @@ export const PlaqueArea = styled.div`
   justify-content: space-around;
   width: 18em;
   height: 7.5em;
-  background: #f4e365;
+  background: #feea83;
   box-shadow: inset -4px 4px 8px rgba(205, 191, 85, 0.2),
     inset 4px -4px 8px rgba(205, 191, 85, 0.2),
-    inset -4px -4px 8px rgba(255, 255, 117, 0.9),
     inset 4px 4px 10px rgba(205, 191, 85, 0.9);
 `;
 

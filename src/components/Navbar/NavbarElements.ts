@@ -18,6 +18,10 @@ export const ListElement = styled(FontDefault).attrs({ as: "li" })`
   list-style: none;
   margin: 20px;
   font-weight: 400;
+  cursor: pointer;
+  &:hover {
+    font-weight: bold;
+  }
 `;
 
 export const ItemWrapper = styled.div`

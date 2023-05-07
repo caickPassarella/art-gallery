@@ -10,6 +10,7 @@ import { SectionTitle } from "./SectionTitle";
 import { ArtistsInfo } from "./ArtistsInfo";
 import { Paragraph } from "./Paragraph";
 import { IconList } from "./IconList";
+import { Pagination } from "./Pagination";
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   ArtistsInfo,
   Paragraph,
   IconList,
+  Pagination,
 };

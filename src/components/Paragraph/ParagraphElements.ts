@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { FontDefault } from "../../styles/main";
-import { SecondaryBGColor } from "../../styles/colors";
 
 export const Container = styled.article`
   display: flex;

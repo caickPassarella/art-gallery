@@ -1,27 +1,60 @@
-import { SectionTitle, Paragraph } from "../../components";
-import { Container, ArtistWrapper, ArtShowcase } from "./ArtistsInfoElements";
+import { useState } from "react";
+import { SectionTitle, Paragraph, Pagination } from "../../components";
+import {
+  Container,
+  Wrapper,
+  ArtShowcase,
+  ArtistText,
+  BoldText,
+  PaginationWrapper,
+} from "./ArtistsInfoElements";
+
+import { ArtistInfo } from "../../types/artPiece";
 
 interface ArtistsInfoProps {
   artHighlight: string;
+  artists: ArtistInfo[];
 }
 
-export const ArtistsInfo = ({ artHighlight }: ArtistsInfoProps) => {
+export const ArtistsInfo = ({ artHighlight, artists }: ArtistsInfoProps) => {
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const currentArtist = artists[currentPage];
+
   return (
     <>
       <SectionTitle
         title="Artists"
-        subtitle="Discover more about our feature artists"
+        subtitle="Discover more about our featured artists"
         type="Section"
       />
       <Container>
-        <ArtistWrapper>
+        <Wrapper>
           <SectionTitle
-            title="Vincent Van Gogh"
-            subtitle="Dutch Painter"
+            title={currentArtist.name}
+            subtitle={currentArtist.subtitle}
             type="Section"
           />
-          <Paragraph text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis magna in metus mattis dapibus at in nulla. Vestibulum id felis tincidunt, facilisis tellus id, volutpat nulla." />
-        </ArtistWrapper>
+          <Paragraph text={currentArtist.description} />
+          {currentArtist.info.map((item, index) => (
+            <ArtistText key={index}>
+              <BoldText>{item.label} </BoldText>
+              {item.value}
+            </ArtistText>
+          ))}
+          <PaginationWrapper>
+            <Pagination
+              numOfPages={artists.length}
+              currentPage={currentPage}
+              onPageChange={handlePageChange}
+            />
+          </PaginationWrapper>
+        </Wrapper>
+
         <ArtShowcase src={artHighlight} />
       </Container>
     </>

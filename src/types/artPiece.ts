@@ -13,6 +13,15 @@ export interface ArtPiece {
   };
 }
 
+export interface ArtistInfo {
+  id: number;
+  name: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  info: { label: string; value: string }[];
+}
+
 export interface ArtPieceProps {
   artPieces: ArtPiece[];
   plaque?: boolean;

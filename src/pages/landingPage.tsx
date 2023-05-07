@@ -11,9 +11,14 @@ import {
   ArtistsInfo,
 } from "../components";
 
-import { ArtPiece, ArtPieceProps } from "../types/artPiece";
+import { ArtPiece, ArtistInfo } from "../types/artPiece";
 
-export const LandingPage = ({ artPieces }: ArtPieceProps) => {
+interface LandingPageProps {
+  artPieces: ArtPiece[];
+  artists: ArtistInfo[];
+}
+
+export const LandingPage = ({ artPieces, artists }: LandingPageProps) => {
   const [normalArtPiece, setNormalArtPiece] = useState<ArtPiece[]>([]);
   const [highlightArtPiece, setHighlightArtPiece] = useState<ArtPiece[]>([]);
 
@@ -39,7 +44,7 @@ export const LandingPage = ({ artPieces }: ArtPieceProps) => {
         <ArtDisplay plaque={true} artPieces={normalArtPiece} />
         <Button>Full Gallery</Button>
         <AboutUs artPieces={[artPieces[9]]} />
-        <ArtistsInfo artHighlight={artPieces[0].asset} />
+        <ArtistsInfo artists={artists} artHighlight={artPieces[0].asset} />
       </Container>
     </>
   );

@@ -10,12 +10,13 @@ export const Wrapper = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 30px 80px;
+  padding: 30px 25px 12px 80px;
 `;
 
 export const ArtShowcase = styled.img`
   flex: 1;
   height: 850px;
+  max-width: 880px;
   object-fit: cover;
 `;
 
@@ -30,5 +31,7 @@ export const BoldText = styled.span`
 `;
 
 export const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
   margin-top: auto;
 `;

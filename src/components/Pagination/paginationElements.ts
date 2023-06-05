@@ -4,6 +4,11 @@ type Props = {
   isFilled: boolean;
 };
 
+export const CircleWrapper = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const Circle = styled.span<Props>`
   display: inline-block;
   margin-right: 8px;

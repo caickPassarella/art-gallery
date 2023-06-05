@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Circle } from "./paginationElements";
+import { Circle, CircleWrapper } from "./paginationElements";
 
 interface PaginationProps {
   numOfPages: number;
@@ -12,7 +12,7 @@ export const Pagination = ({
   currentPage,
   onPageChange,
 }: PaginationProps) => (
-  <div>
+  <CircleWrapper>
     {Array(numOfPages)
       .fill(0)
       .map((_, index) => (
@@ -22,5 +22,5 @@ export const Pagination = ({
           onClick={() => onPageChange(index)}
         />
       ))}
-  </div>
+  </CircleWrapper>
 );

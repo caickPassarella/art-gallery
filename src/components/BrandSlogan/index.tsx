@@ -7,7 +7,7 @@ type Props = {
 
 export const BrandSlogan = ({ name, slogan }: Props) => (
   <BrandWrapper>
-    <BrandName>Simplistik</BrandName>
-    <Slogan>Contemporary art, simplified</Slogan>
+    <BrandName>{name}</BrandName>
+    <Slogan>{slogan}</Slogan>
   </BrandWrapper>
 );

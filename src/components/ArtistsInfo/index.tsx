@@ -1,5 +1,10 @@
-import { useState } from "react";
-import { SectionTitle, Paragraph, Pagination } from "../../components";
+import { useState, useEffect } from "react";
+import {
+  SectionTitle,
+  Paragraph,
+  Pagination,
+  BrandSlogan,
+} from "../../components";
 import {
   Container,
   Wrapper,
@@ -9,21 +14,30 @@ import {
   PaginationWrapper,
 } from "./ArtistsInfoElements";
 
-import { ArtistInfo } from "../../types/artPiece";
+import { ArtistInfo, ArtPiece } from "../../types/artPiece";
 
 interface ArtistsInfoProps {
-  artHighlight: string;
+  artHighlight: ArtPiece[];
   artists: ArtistInfo[];
 }
 
 export const ArtistsInfo = ({ artHighlight, artists }: ArtistsInfoProps) => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [currentArtistPiece, setCurrentArtistPiece] = useState<ArtPiece>();
+
+  const currentArtist = artists[currentPage];
+
+  useEffect(() => {
+    setCurrentArtistPiece(
+      artHighlight.find(
+        (artPiece) => currentArtist.name === artPiece.artist.name
+      )
+    );
+  }, [artHighlight, currentArtist.name]);
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
-
-  const currentArtist = artists[currentPage];
 
   return (
     <>
@@ -52,10 +66,10 @@ export const ArtistsInfo = ({ artHighlight, artists }: ArtistsInfoProps) => {
               currentPage={currentPage}
               onPageChange={handlePageChange}
             />
+            <BrandSlogan name="Abstract Purple" slogan="Vicent Van Gogh" />
           </PaginationWrapper>
         </Wrapper>
-
-        <ArtShowcase src={artHighlight} />
+        {currentArtistPiece && <ArtShowcase src={currentArtistPiece.asset} />}
       </Container>
     </>
   );

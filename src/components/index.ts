@@ -5,6 +5,7 @@ import { Footer } from "./Footer";
 import { Button } from "./Button";
 import { ArtDisplay } from "./ArtDisplay";
 import { Plaque } from "./Plaque";
+import { BrandSlogan } from "./BrandSlogan";
 import { Container } from "./Container";
 import { SectionTitle } from "./SectionTitle";
 import { ArtistsInfo } from "./ArtistsInfo";
@@ -26,4 +27,5 @@ export {
   Paragraph,
   IconList,
   Pagination,
+  BrandSlogan,
 };

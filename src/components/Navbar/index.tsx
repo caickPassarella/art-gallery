@@ -6,8 +6,7 @@ import {
   VerticalDivider,
 } from "./NavbarElements";
 import { Favorite, Search } from "../../assets";
-import { IconList } from "../IconList";
-import { BrandSlogan } from "../BrandSlogan";
+import { IconList, BrandSlogan } from "../index";
 
 export const Navbar = () => (
   <NavContainer>

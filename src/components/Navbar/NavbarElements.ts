@@ -19,8 +19,9 @@ export const ListElement = styled(FontDefault).attrs({ as: "li" })`
   margin: 20px;
   font-weight: 400;
   cursor: pointer;
+  transition: text-shadow 0.3s ease;
   &:hover {
-    font-weight: bold;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   }
 `;
 

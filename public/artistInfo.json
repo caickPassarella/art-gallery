@@ -1,0 +1,43 @@
+{
+  "artists": [
+    {
+      "id": 0,
+      "name": "Vincent Van Gogh",
+      "subtitle": "Dutch Painter",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbpsum dolor sit amet, consectetur adipiscing elit. Morbi convallis mapsum dolor sit amet, consectetur adipiscing elit. Morbi convallis mapsum dolor sit amet, consectetur adipiscing elit. Morbi convallis mai convallis magna in metus mattis dapibus at in nulla. Vestibulum id felis tincidunt, facilisis tellus id, volutpat nulla.",
+      "image": "path to image",
+      "info": [
+        { "label": "Born:", "value": "1853" },
+        { "label": "Died:", "value": "1890" },
+        { "label": "Period:", "value": "Post-Impressionism" },
+        { "label": "Nationality:", "value": "Dutch" }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Vincent Van Gogh 2",
+      "subtitle": "Dutch Painter",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis magna in metus mattis dapibus at in nulla. Vestibulum id felis tincidunt, facilisis tellus id, volutpat nulla.",
+      "image": "path to image 2",
+      "info": [
+        { "label": "Born:", "value": "1853" },
+        { "label": "Died:", "value": "1890" },
+        { "label": "Period:", "value": "Post-Impressionism" },
+        { "label": "Nationality:", "value": "Dutch" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Vincent Van Gogh 3",
+      "subtitle": "Dutch Painter",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi convallis magna in metus mattis dapibus at in nulla. Vestibulum id felis tincidunt, facilisis tellus id, volutpat nulla.",
+      "image": "path to image 2",
+      "info": [
+        { "label": "Born:", "value": "1853" },
+        { "label": "Died:", "value": "1890" },
+        { "label": "Period:", "value": "Post-Impressionism" },
+        { "label": "Nationality:", "value": "Dutch" }
+      ]
+    }
+  ]
+}

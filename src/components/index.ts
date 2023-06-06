@@ -5,8 +5,13 @@ import { Footer } from "./Footer";
 import { Button } from "./Button";
 import { ArtDisplay } from "./ArtDisplay";
 import { Plaque } from "./Plaque";
+import { BrandSlogan } from "./BrandSlogan";
 import { Container } from "./Container";
 import { SectionTitle } from "./SectionTitle";
+import { ArtistsInfo } from "./ArtistsInfo";
+import { Paragraph } from "./Paragraph";
+import { IconList } from "./IconList";
+import { Pagination } from "./Pagination";
 
 export {
   Navbar,
@@ -18,4 +23,9 @@ export {
   Container,
   SectionTitle,
   ArtDisplay,
+  ArtistsInfo,
+  Paragraph,
+  IconList,
+  Pagination,
+  BrandSlogan,
 };

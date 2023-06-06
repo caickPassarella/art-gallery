@@ -10,7 +10,7 @@
       "year": "2023",
       "highlight": true,
       "artist": {
-        "name": "Artist name 0",
+        "name": "Vincent Van Gogh",
         "birthYear": "1960",
         "deathYear": "2023"
       }
@@ -66,7 +66,7 @@
       "year": "2023",
       "highlight": true,
       "artist": {
-        "name": "Artist name 4",
+        "name": "Vincent Van Gogh 2",
         "birthYear": "1960",
         "deathYear": "2023"
       }
@@ -94,7 +94,7 @@
       "year": "2023",
       "highlight": false,
       "artist": {
-        "name": "Artist name 6",
+        "name": "Vincent Van Gogh 3",
         "birthYear": "1960",
         "deathYear": "2023"
       }

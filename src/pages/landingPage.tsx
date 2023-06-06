@@ -7,13 +7,18 @@ import {
   Footer,
   SectionTitle,
   ArtDisplay,
-  Plaque,
   Button,
+  ArtistsInfo,
 } from "../components";
 
-import { ArtPiece, ArtPieceProps } from "../types/artPiece";
+import { ArtPiece, ArtistInfo } from "../types/artPiece";
 
-export const LandingPage = ({ artPieces }: ArtPieceProps) => {
+interface LandingPageProps {
+  artPieces: ArtPiece[];
+  artists: ArtistInfo[];
+}
+
+export const LandingPage = ({ artPieces, artists }: LandingPageProps) => {
   const [normalArtPiece, setNormalArtPiece] = useState<ArtPiece[]>([]);
   const [highlightArtPiece, setHighlightArtPiece] = useState<ArtPiece[]>([]);
 
@@ -21,7 +26,7 @@ export const LandingPage = ({ artPieces }: ArtPieceProps) => {
     const normalArtData = artPieces.filter((art) => !art.highlight);
     const highlightArtData = artPieces.filter((art) => art.highlight);
     setNormalArtPiece(normalArtData.slice(0, 2));
-    setHighlightArtPiece([highlightArtData[0]]);
+    setHighlightArtPiece(highlightArtData);
   }, [artPieces]);
 
   return (
@@ -35,10 +40,11 @@ export const LandingPage = ({ artPieces }: ArtPieceProps) => {
           subtitle="Explore the art"
           type="Main"
         />
-        <ArtDisplay plaque={true} artPieces={highlightArtPiece} />
+        <ArtDisplay plaque={true} artPieces={highlightArtPiece.slice(0, 1)} />
         <ArtDisplay plaque={true} artPieces={normalArtPiece} />
         <Button>Full Gallery</Button>
         <AboutUs artPieces={[artPieces[9]]} />
+        <ArtistsInfo artists={artists} artHighlight={artPieces} />
       </Container>
     </>
   );

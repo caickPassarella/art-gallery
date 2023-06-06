@@ -16,7 +16,7 @@ import {
   BrandName,
 } from "./AboutUsElements";
 
-export const AboutUs = ({ artPieces }: ArtPieceProps) => {
+export const AboutUs: React.FC<ArtPieceProps> = ({ artPieces }) => {
   return (
     <Wrapper>
       <Container>

@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 import { ButtonStyle } from "./ButtonElements";
 
-type ButtonProps = {
+interface ButtonProps {
   children: ReactNode;
-};
+}
 
-export const Button = ({ children }: ButtonProps) => {
+export const Button: React.FC<ButtonProps> = ({ children }) => {
   return <ButtonStyle>{children}</ButtonStyle>;
 };

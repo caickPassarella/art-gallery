@@ -1,11 +1,11 @@
 import { P, PTitle, Container } from "./ParagraphElements";
 
-type AboutUsProps = {
+interface AboutUsProps {
   title?: string;
   text: string;
-};
+}
 
-export const Paragraph = ({ title, text }: AboutUsProps) => {
+export const Paragraph: React.FC<AboutUsProps> = ({ title, text }) => {
   return (
     <Container>
       {title ? <PTitle>{title}</PTitle> : null}

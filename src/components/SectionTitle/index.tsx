@@ -1,12 +1,16 @@
 import { TitleContainer, Title, SubTitle } from "./SectionTitleElements";
 
-type Props = {
+interface TitleProps {
   title: string;
   subtitle?: string;
   type: "Main" | "Section";
-};
+}
 
-export const SectionTitle = ({ title, subtitle, type }: Props) => {
+export const SectionTitle: React.FC<TitleProps> = ({
+  title,
+  subtitle,
+  type,
+}) => {
   return (
     <TitleContainer>
       <Title type={type}>{title}</Title>

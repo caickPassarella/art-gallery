@@ -1,9 +1,4 @@
-import {
-  SectionTitle,
-  Paragraph,
-  ArtDisplay,
-  IconList,
-} from "../../components";
+import { SectionTitle, Paragraph, ArtDisplay, IconList } from "../";
 import { ArtPieceProps } from "../../types/artPiece";
 
 import { Pinterest, Instagram } from "../../assets";

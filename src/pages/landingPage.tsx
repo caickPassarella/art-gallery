@@ -45,7 +45,7 @@ export const LandingPage = ({ artPieces, artists }: LandingPageProps) => {
         <Button>Full Gallery</Button>
         <AboutUs artPieces={[artPieces[9]]} />
         <ArtistsInfo artists={artists} artHighlight={artPieces} />
-        <ContactUs/>
+        <ContactUs />
       </Container>
     </>
   );

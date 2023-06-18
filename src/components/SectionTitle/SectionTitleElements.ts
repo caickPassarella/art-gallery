@@ -21,7 +21,7 @@ export const Title = styled(FontDefault).attrs({ as: "h1" })<Props>`
 
 export const SubTitle = styled(FontDefault).attrs({ as: "h2" })<Props>`
   font-family: "Roboto";
-  font-size: ${(props) => (props.type === "Main" ? "2.5em" : "1.5em")};
+  font-size: ${(props) => (props.type === "Main" ? "2.4em" : "1.4em")};
 
   color: ${PrimaryFontColor};
 `;

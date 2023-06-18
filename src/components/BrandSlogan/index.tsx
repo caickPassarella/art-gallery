@@ -1,11 +1,11 @@
 import { BrandWrapper, BrandName, Slogan } from "./BrandSloganElements";
 
-type Props = {
+interface BrandProps {
   name: String;
   slogan: String;
-};
+}
 
-export const BrandSlogan = ({ name, slogan }: Props) => (
+export const BrandSlogan: React.FC<BrandProps> = ({ name, slogan }) => (
   <BrandWrapper>
     <BrandName>{name}</BrandName>
     <Slogan>{slogan}</Slogan>

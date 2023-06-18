@@ -1,11 +1,11 @@
 import { IconContainer, GridItem, Img } from "./IconListElements";
 
-type IconListProps = {
+interface IconListProps {
   icons: Array<string>;
   height?: string;
-};
+}
 
-export const IconList = ({ icons, height }: IconListProps) => {
+export const IconList: React.FC<IconListProps> = ({ icons, height }) => {
   const columns = Math.ceil(Math.sqrt(icons.length));
   return (
     <IconContainer style={{ gridTemplateColumns: `repeat(${columns}, 1fr)` }}>

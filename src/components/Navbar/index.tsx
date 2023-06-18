@@ -8,7 +8,7 @@ import {
 import { Favorite, Search } from "../../assets";
 import { IconList, BrandSlogan } from "../index";
 
-export const Navbar = () => (
+export const Navbar: React.FC = () => (
   <NavContainer>
     <NavList>
       <ListElement>Home</ListElement>

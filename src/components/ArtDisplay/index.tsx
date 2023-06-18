@@ -9,7 +9,7 @@ import {
 import { Plaque } from "../Plaque";
 import { ArtPieceProps } from "../../types/artPiece";
 
-export const ArtDisplay = ({ artPieces, plaque }: ArtPieceProps) => {
+export const ArtDisplay: React.FC<ArtPieceProps> = ({ artPieces, plaque }) => {
   if (artPieces.length === 0) {
     return null;
   }

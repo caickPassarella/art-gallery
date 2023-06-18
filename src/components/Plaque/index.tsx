@@ -16,7 +16,11 @@ interface PlaqueProps {
   pieceDesc: String;
 }
 
-export const Plaque = ({ artist, pieceName, pieceDesc }: PlaqueProps) => {
+export const Plaque: React.FC<PlaqueProps> = ({
+  artist,
+  pieceName,
+  pieceDesc,
+}) => {
   return (
     <PlaqueContainer>
       <PlaqueArea>

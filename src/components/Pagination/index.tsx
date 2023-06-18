@@ -7,11 +7,11 @@ interface PaginationProps {
   onPageChange: (pageNumber: number) => void;
 }
 
-export const Pagination = ({
+export const Pagination: React.FC<PaginationProps> = ({
   numOfPages,
   currentPage,
   onPageChange,
-}: PaginationProps) => (
+}) => (
   <CircleWrapper>
     {Array(numOfPages)
       .fill(0)

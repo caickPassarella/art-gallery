@@ -1,9 +1,4 @@
-import {
-  SectionTitle,
-  Paragraph,
-  ArtDisplay,
-  IconList,
-} from "../../components";
+import { SectionTitle, Paragraph, ArtDisplay, IconList } from "../";
 import { ArtPieceProps } from "../../types/artPiece";
 
 import { Pinterest, Instagram } from "../../assets";
@@ -16,7 +11,7 @@ import {
   BrandName,
 } from "./AboutUsElements";
 
-export const AboutUs = ({ artPieces }: ArtPieceProps) => {
+export const AboutUs: React.FC<ArtPieceProps> = ({ artPieces }) => {
   return (
     <Wrapper>
       <Container>

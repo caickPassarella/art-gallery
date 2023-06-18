@@ -21,7 +21,10 @@ interface ArtistsInfoProps {
   artists: ArtistInfo[];
 }
 
-export const ArtistsInfo = ({ artHighlight, artists }: ArtistsInfoProps) => {
+export const ArtistsInfo: React.FC<ArtistsInfoProps> = ({
+  artHighlight,
+  artists,
+}) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [currentArtistPiece, setCurrentArtistPiece] = useState<ArtPiece>();
 

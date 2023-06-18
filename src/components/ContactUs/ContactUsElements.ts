@@ -51,4 +51,5 @@ export const TextArea = styled.textarea`
 export const ButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
+  padding: 25px 0;
 `;

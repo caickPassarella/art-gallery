@@ -11,12 +11,15 @@ import {
   ButtonWrapper,
 } from "./ContactUsElements";
 
+// react-select custom style
 const colourStyles: StylesConfig = {
   control: (styles) => ({
     ...styles,
     backgroundColor: "#FEEA83",
     borderColor: "#000000",
     fontFamily: "Roboto",
+    boxShadow: "none",
+    border: "1px solid #000000",
   }),
   menu: (styles) => ({
     ...styles,
@@ -39,14 +42,9 @@ const colourStyles: StylesConfig = {
       },
     };
   },
-  indicatorSeparator: (styles) => ({
-    ...styles,
-    color: "#000000",
-  }),
-  container: (styles, { isFocused }) => ({
-    ...styles,
-    borderColor: "#000000",
-  }),
+  indicatorSeparator: () => ({ display: "none" }),
+  dropdownIndicator: (styles) => ({ ...styles, color: "#000000" }),
+  container: (styles) => ({ ...styles, borderColor: "#000000" }),
 };
 
 export const ContactUs: React.FC = () => {

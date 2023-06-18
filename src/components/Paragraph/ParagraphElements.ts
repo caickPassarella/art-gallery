@@ -14,5 +14,5 @@ export const P = styled(FontDefault)`
 `;
 
 export const PTitle = styled(FontDefault).attrs({ as: "h3" })`
-  font-size: 2.2em;
+  font-size: 2em;
 `;

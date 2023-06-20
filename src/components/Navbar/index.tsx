@@ -17,7 +17,7 @@ export const Navbar: React.FC = () => (
       <ListElement>Contact</ListElement>
     </NavList>
     <ItemWrapper>
-      <IconList height="30px" icons={[Search, Favorite]} />
+      <IconList height="30px" icons={[Search]} />
       <VerticalDivider />
       <BrandSlogan name="Simplistik" slogan="Contemporary art, simplified" />
     </ItemWrapper>

@@ -1,5 +1,4 @@
 import {
-  PlaqueContainer,
   PlaqueArea,
   TextWrapper,
   PieceName,
@@ -8,7 +7,7 @@ import {
 } from "./PlaqueElements";
 
 import { IconList } from "../IconList";
-import { Favorite, Zoom } from "../../assets";
+import { Zoom } from "../../assets";
 
 interface PlaqueProps {
   artist: String;
@@ -22,15 +21,15 @@ export const Plaque: React.FC<PlaqueProps> = ({
   pieceDesc,
 }) => {
   return (
-    <PlaqueContainer>
+    <>
       <PlaqueArea>
         <TextWrapper>
           <Artist>{artist}</Artist>
           <PieceName>{pieceName}</PieceName>
           <PieceDesc>{pieceDesc}</PieceDesc>
         </TextWrapper>
-        <IconList icons={[Favorite, Zoom]} height={"20px"} />
+        <IconList icons={[Zoom]} height={"20px"} />
       </PlaqueArea>
-    </PlaqueContainer>
+    </>
   );
 };

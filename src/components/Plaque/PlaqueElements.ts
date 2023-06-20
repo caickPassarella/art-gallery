@@ -5,7 +5,6 @@ export const PlaqueArea = styled.div`
   display: flex;
   padding-right: 15px;
   margin-top: 35px;
-  justify-content: space-around;
   width: 18em;
   height: 7.5em;
   background: #feea83;
@@ -17,6 +16,7 @@ export const PlaqueArea = styled.div`
 export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   gap: 8px;
   padding: 20px 10px 0 20px;
 `;

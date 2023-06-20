@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   SectionTitle,
   Paragraph,
@@ -27,17 +27,21 @@ export const ArtistsInfo: React.FC<ArtistsInfoProps> = ({
   artists,
 }) => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentArtistPiece, setCurrentArtistPiece] = useState<ArtPiece>();
+  const [currentArtistPiece, setCurrentArtistPiece] = useState<string>();
 
   const currentArtist = artists[currentPage];
 
+  const artistPiecesMap = useMemo(() => {
+    const map = new Map<string, string>();
+    artHighlight.forEach((artPiece) => {
+      map.set(artPiece.artist.name, artPiece.asset);
+    });
+    return map;
+  }, [artHighlight]);
+
   useEffect(() => {
-    setCurrentArtistPiece(
-      artHighlight.find(
-        (artPiece) => currentArtist.name === artPiece.artist.name
-      )
-    );
-  }, [artHighlight, currentArtist.name]);
+    setCurrentArtistPiece(artistPiecesMap.get(currentArtist.name));
+  }, [artistPiecesMap, currentArtist.name]);
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
@@ -75,7 +79,7 @@ export const ArtistsInfo: React.FC<ArtistsInfoProps> = ({
         <ArtPieceWrapper>
           <BrandSlogan name="Abstract Purple" slogan="Vicent Van Gogh" />
         </ArtPieceWrapper>
-        {currentArtistPiece && <ArtShowcase src={currentArtistPiece.asset} />}
+        {currentArtistPiece && <ArtShowcase src={currentArtistPiece} />}
       </Container>
     </>
   );

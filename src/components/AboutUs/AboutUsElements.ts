@@ -2,16 +2,19 @@ import styled from "styled-components";
 import { SecondaryBGColor } from "../../styles/colors";
 import { FontDefault } from "../../styles/main";
 
+// Change flex to column when in lower res
 export const Wrapper = styled.section`
   display: flex;
+  margin-top: 80px;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: ${SecondaryBGColor};
 `;
 
 export const Container = styled.div`
-  background-color: ${SecondaryBGColor};
-
-  margin-top: 80px;
-  padding: 25px 80px;
+  padding: 25px 40px;
+  flex: 1;
 `;
 
 export const ParagraphWrapper = styled.div`

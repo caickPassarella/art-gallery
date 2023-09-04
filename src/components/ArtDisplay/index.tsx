@@ -1,8 +1,6 @@
 import {
   HighlightDisplayContainer,
-  ArtImg,
   PieceWrapper,
-  FrameWrapper,
   ArtFrame,
 } from "./ArtDisplayElements";
 
@@ -18,10 +16,11 @@ export const ArtDisplay: React.FC<ArtPieceProps> = ({ artPieces, plaque }) => {
       {artPieces.map((piece, index) => {
         return (
           <PieceWrapper key={index}>
-            <FrameWrapper>
-              <ArtImg src={piece.asset} highlight={piece.highlight} />
-              <ArtFrame src={piece.frame} highlight={piece.highlight} />
-            </FrameWrapper>
+            <ArtFrame
+              src={piece.frame}
+              artImage={piece.asset}
+              highlight={piece.highlight}
+            />
             {plaque === false ? null : (
               <Plaque
                 artist={piece.artist.name}

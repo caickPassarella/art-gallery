@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { StylesConfig } from "react-select";
 
 interface GroupProps {
   width?: string;
@@ -7,7 +8,6 @@ interface GroupProps {
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
-  min-width: 800px;
 `;
 
 export const FormGroup = styled.div<GroupProps>`
@@ -53,3 +53,39 @@ export const ButtonWrapper = styled.div`
   justify-content: center;
   padding: 25px 0;
 `;
+
+// react-select custom style
+export const colourStyles: StylesConfig = {
+  control: (styles) => ({
+    ...styles,
+    backgroundColor: "#FEEA83",
+    borderColor: "#000000",
+    fontFamily: "Roboto",
+    boxShadow: "none",
+    border: "1px solid #000000",
+  }),
+  menu: (styles) => ({
+    ...styles,
+    backgroundColor: "#FEEA83",
+    borderColor: "#000000",
+  }),
+  option: (styles, { isFocused, isSelected }) => {
+    return {
+      ...styles,
+      backgroundColor: isSelected
+        ? "#F9DD97"
+        : isFocused
+        ? "#EBD980"
+        : undefined,
+      color: "#000000",
+
+      ":active": {
+        ...styles[":active"],
+        backgroundColor: isSelected ? "#EBD980" : "#C9BA6E",
+      },
+    };
+  },
+  indicatorSeparator: () => ({ display: "none" }),
+  dropdownIndicator: (styles) => ({ ...styles, color: "#000000" }),
+  container: (styles) => ({ ...styles, borderColor: "#000000" }),
+};

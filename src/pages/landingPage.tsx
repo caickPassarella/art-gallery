@@ -31,10 +31,10 @@ export const LandingPage = ({ artPieces, artists }: LandingPageProps) => {
 
   return (
     <>
-      <Container>
+      <Container align="normal" bgColor="#FEEA83">
         <Navbar />
       </Container>
-      <Container align="center">
+      <Container bgColor="#FEEA83">
         <SectionTitle
           title="Art Gallery"
           subtitle="Explore the art"

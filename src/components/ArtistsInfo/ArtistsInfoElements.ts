@@ -10,15 +10,14 @@ export const Wrapper = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 30px 25px 25px 80px;
+  padding: 45px;
 `;
 
 export const ArtShowcase = styled.img`
   flex: 1;
-  height: 850px;
-  min-width: 880px;
-  max-width: 880px;
   object-fit: cover;
+  min-width: 50%;
+  height: 850px;
 `;
 
 export const ArtistText = styled(FontDefault)`
@@ -35,8 +34,5 @@ export const PaginationWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: auto;
-`;
-
-export const ArtPieceWrapper = styled(PaginationWrapper)`
-  padding: 15px;
+  align-items: flex-end;
 `;

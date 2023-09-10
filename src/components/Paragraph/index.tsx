@@ -1,4 +1,5 @@
-import { P, PTitle, Container } from "./ParagraphElements";
+import { P, PTitle } from "./ParagraphElements";
+import { Container } from "../index";
 
 interface AboutUsProps {
   title?: string;
@@ -7,7 +8,7 @@ interface AboutUsProps {
 
 export const Paragraph: React.FC<AboutUsProps> = ({ title, text }) => {
   return (
-    <Container>
+    <Container align="flex-start">
       {title ? <PTitle>{title}</PTitle> : null}
       <P>{text}</P>
     </Container>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Container } from "../index";
 import { PrimaryFontColor } from "../../styles/colors";
 import { FontDefault } from "../../styles/main";
 
@@ -6,10 +7,7 @@ type Props = {
   type: string;
 };
 
-export const TitleContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const TitleContainer = styled(Container)`
   margin: 50px;
 `;
 

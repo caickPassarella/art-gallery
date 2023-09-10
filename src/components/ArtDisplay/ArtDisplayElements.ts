@@ -11,6 +11,7 @@ export const HighlightDisplayContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  max-width: 65%;
 `;
 
 export const PieceWrapper = styled.div`

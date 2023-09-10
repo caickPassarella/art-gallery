@@ -3,9 +3,27 @@ import { Wrapper } from "./ContainerElements";
 
 interface ContainerProps {
   align?: string;
+  direction?: string;
+  bgColor?: string;
+  className?: string;
   children: ReactNode;
 }
 
-export const Container: React.FC<ContainerProps> = ({ children, align }) => {
-  return <Wrapper align={align}>{children}</Wrapper>;
+export const Container: React.FC<ContainerProps> = ({
+  children,
+  align,
+  direction,
+  bgColor,
+  className,
+}) => {
+  return (
+    <Wrapper
+      align={align}
+      direction={direction}
+      bgColor={bgColor}
+      className={className}
+    >
+      {children}
+    </Wrapper>
+  );
 };

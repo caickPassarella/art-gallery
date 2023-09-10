@@ -1,12 +1,6 @@
 import styled from "styled-components";
 import { FontDefault } from "../../styles/main";
 
-export const Container = styled.article`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
 export const P = styled(FontDefault)`
   font-family: "Roboto";
   line-height: 130%;

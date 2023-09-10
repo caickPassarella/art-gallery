@@ -12,7 +12,6 @@ import {
   ArtistText,
   BoldText,
   PaginationWrapper,
-  ArtPieceWrapper,
 } from "./ArtistsInfoElements";
 
 import { ArtistInfo, ArtPiece } from "../../types/artPiece";
@@ -76,11 +75,10 @@ export const ArtistsInfo: React.FC<ArtistsInfoProps> = ({
             />
           </PaginationWrapper>
         </Wrapper>
-        <ArtPieceWrapper>
-          <BrandSlogan name="Abstract Purple" slogan="Vicent Van Gogh" />
-        </ArtPieceWrapper>
         {currentArtistPiece && <ArtShowcase src={currentArtistPiece} />}
       </Container>
     </>
   );
 };
+
+// <BrandSlogan name="Abstract Purple" slogan="Vicent Van Gogh" />
